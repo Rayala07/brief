@@ -23,7 +23,7 @@ model user {
   updatedAt DateTime @updatedAt
 
   agencyId String?
-  role Role @default(member)
+  role Role @default(owner)
 
   agency Agency? @relation(fields: [agencyId], references: [id])
   sessions session[]
