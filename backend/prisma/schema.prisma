@@ -81,7 +81,8 @@ model verification {
 model Agency {
   id String @id @default(uuid())
   name String
-  owner String @unique
+  category String
+  ownerId String @unique
   plan String @default("free")
   createdAt DateTime @default(now())
 
